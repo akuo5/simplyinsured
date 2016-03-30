@@ -8,16 +8,13 @@ class InsurancesController < ApplicationController
 
     age = params[:age]
     zip_code = params[:zip_code]
-    if age.is_a? Integer and zip_code.is_a? Integer
-      location = Zip.find_by(zip_code: zip_code)
-      region = nil
-      if location.present?
-        region = location.region
-      end
-    else
-      age = nil
-      region = nil
+    
+    location = Zip.find_by(zip_code: zip_code)
+    region = nil
+    if location.present?
+      region = location.region
     end
+
     @insurances = Insurance.where(age: age, region: region).to_a
   end
 
