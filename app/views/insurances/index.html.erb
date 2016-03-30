@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>SimplyInsured</title>
+  <%= stylesheet_link_tag 'index' %>
+  <%= javascript_include_tag 'index' %>
+
+</head>
+
+
+<body>
+
+<div class="cont">
+  <div class="demo">
+    <div class="search">
+      <%= form_tag("/insurances", method: "get") do %>
+
+        <div class="search__form">
+        <div class="search__row">
+          <svg class="search__icon name svg-icon">
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8"></path>
+          </svg>
+          <%= text_field_tag :age, nil, placeholder: 'Age', class: 'search__input name'%>
+        </div>
+        <div class="search__row">
+          <svg class="search__icon pass svg-icon">
+            <path d="M10 20 L14 10 Q18 0 10 0 Q2 0 6 10 Z M7,5a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"></path>
+          </svg>
+          <%= text_field_tag :zip_code, nil, placeholder: 'ZIP', class: 'search__input pass'%>
+        </div>
+          <%= submit_tag "Find Plans", class:"search__submit" %>
+          <% end %>
+      </div>
+    </div>
+
+
+
+
+<!--<h4>Listing from age <%= params[:age] %> and zip code <%= params[:zip_code] %></h4>-->
+    <div class="app">
+      <table>
+        <thead>
+        <tr>
+          <th>Carrier</th>
+          <th>Plan</th>
+          <th>Monthly Premium</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @insurances.each do |insurance| %>
+            <tr>
+              <td><%= insurance.carrier %></td>
+              <td><%= insurance.plan %></td>
+              <td>$<%= insurance.monthly_premium %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

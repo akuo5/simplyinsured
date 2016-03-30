@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Carrier:</strong>
+  <%= @insurance.carrier %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @insurance.plan %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @insurance.region %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @insurance.age %>
+</p>
+
+<p>
+  <strong>Monthly premium:</strong>
+  <%= @insurance.monthly_premium %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_path(@insurance) %> |
+<%= link_to 'Back', insurances_path %>

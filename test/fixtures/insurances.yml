@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  carrier: MyString
+  plan: MyString
+  region: 1
+  age: 1
+  monthly_premium: 1.5
+
+two:
+  carrier: MyString
+  plan: MyString
+  region: 1
+  age: 1
+  monthly_premium: 1.5
