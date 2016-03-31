@@ -11,6 +11,3 @@ http://jxnblk.com/paths/
 
 Background:
 https://www.reddit.com/r/wallpaper/comments/4c6dho/akashi_kaikyo_1920x1080/
-
-Minor Bug:
--inputting alphabetic characters for both age and zip gives a generic row (carrier plan $0.0)
